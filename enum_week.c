@@ -6,7 +6,7 @@ bool is_weekend (enum weekday today);
 
 int main() {
     enum weekday today;
-    today = SAT;
+    today = TUE;
     printf("%d : %d \n", today, is_weekend (today));
     return 0;
 }
