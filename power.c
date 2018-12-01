@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+int power (int x, unsigned int n);
+
+int main ()
+{
+    printf ("10^1 = %d \n", power(10,1));
+    printf ("2^10 = %d \n", power(2,10));
+    printf ("-4^7 = %d \n", power(-4,7));
+    printf ("10^0 = %d \n", power(10,0)); 
+    return 0;
+}
+
 int power (int x, unsigned int n)
 {
     if (n == 1)
@@ -15,13 +26,4 @@ int power (int x, unsigned int n)
     {
         return x*power(x*x, (n-1)/2);
     }
-}
-
-int main ()
-{
-    printf ("10^1 = %d \n", power(10,1));
-    printf ("2^10 = %d \n", power(2,10));
-    printf ("-4^7 = %d \n", power(-4,7));
-    printf ("10^0 = %d \n", power(10,0)); 
-    return 0;
 }
