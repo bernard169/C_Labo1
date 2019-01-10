@@ -3,18 +3,18 @@
 
 int main () {
     char name [128];
-    unsigned int guess;
-    srand (7); //seed is 13
+    unsigned int guess=0;
+    srand (13); //seed is 13
     unsigned int number = (rand()%50)+1;
     printf ("Hello! What\'s your name ?\n");
     scanf("%s", name);
     printf("Well, %s, I am thinking of a number between 1 and 50. \nTake a guess.\n", name);
     unsigned int counter;
     counter = 0;
-    printf ("a litlle bit of cheating. My number is %d.\n", number);
-    printf("Your wrote %u \n", guess);
+	unsigned int *pointerGuess = &guess;
     do {
-        scanf("%u", guess);
+		printf("Now enter a number \n");
+        scanf("%u", pointerGuess);
         printf("Your wrote %u \n", guess);
         if (guess < number)
         {
